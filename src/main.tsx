@@ -1,22 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Tweet from './components/Tweet'
-import './components/global.css'
+import './global.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-
-    <div className="layot">
+    <div className='layout'>
       <aside className="sidebar">
-        sidebar
-        <img src="" alt="Logo" />
-        <nav></nav>
-        <button>tweet</button>
+        <img src="" alt="logo" />
+        <nav>
+          <a>home</a>
+        </nav>
+        <button>Tweet</button>
       </aside>
-      
-      <div className="content"></div>
+      <div className="content">
         content
+      </div>
     </div>
-
   </React.StrictMode>,
 )

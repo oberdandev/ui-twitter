@@ -8,18 +8,17 @@ interface TweetProps {
 
 const tweetStyles = {
   borderRadius: '8px',
-
 }
 
 function Tweet(props: TweetProps) {
-  const [likes, setLikes] = useState(0)
+
 
   return (
     <>
     <div className="tweet" style={tweetStyles}>
-      <h2>{props.user}</h2>
-     <h4>{props.children}</h4> 
-      <button onClick={()=> setLikes((likes)=> likes + 1)}>Like {likes} </button>
+      <strong>{props.user}</strong>
+      <p>{props.children}</p> 
+      <button>Like {props.likes ?? 0} </button>
     </div>
     </>
   )
