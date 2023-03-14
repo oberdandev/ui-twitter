@@ -1,7 +1,11 @@
 import { ArrowsClockwise, ChatCircle, Heart } from "phosphor-react";
 import "./Tweet.css"
 
-function Tweet() {
+interface TweetProps {
+  content: string
+}
+
+function Tweet(props: TweetProps) {
   return (
     <>
     <a href="#" className="tweet">
@@ -11,11 +15,7 @@ function Tweet() {
           <strong>Oberdan Angelim</strong>
           <span>@oberudan</span>
         </div>
-          <p>
-            Teste de texto com várias coisas para por no html e fingir que é um tweet.
-            <br/>
-            Teste teste
-          </p>
+          <p>{props.content}</p>
           <div className="tweet-content-footer">
             <button type="button">
               <ChatCircle />

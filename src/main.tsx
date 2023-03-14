@@ -5,6 +5,16 @@ import Tweet from './components/Tweet'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import Separator from './components/Separator'
+import {RouterProvider} from 'react-router-dom';
+import {router} from './routes'
+
+const tweets = [
+  'meu primeripo weet',
+  'meu segundo tweet',
+  'meu terceiro tweet',
+  'meu quarto tweet'
+]
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -15,6 +25,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <main className="timeline">
           <Header title='Home'/>
 
+
+          <RouterProvider router={router}/>
+          
           <form className="new-tweet-form">
             <label htmlFor="tweet">
               <img src="https://github.com/oberdandev.png" alt="" />
@@ -25,11 +38,15 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           </form>
 
           <Separator />
+
+          {tweets.map((tweet)=> {
+            return <Tweet key={tweet} content={tweet} />
+          })}
           
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
+          <Tweet content='tweet 1'/>
+          <Tweet content='tweet 1'/>
+          <Tweet content='tweet 1'/>
+          <Tweet content='tweet 1'/>
 
         </main>
       </div>
