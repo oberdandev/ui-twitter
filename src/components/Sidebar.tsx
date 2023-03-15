@@ -1,4 +1,4 @@
-import {House, Hash, Bell, EnvelopeSimple, BookmarkSimple, User, List, FileText, File, Sparkle} from 'phosphor-react'
+import {House, Hash, Bell, EnvelopeSimple, BookmarkSimple, User, List, FileText, File, Sparkle, DotsThreeOutline} from 'phosphor-react'
 import twitterLogo from '../assets/twitter-logo.svg'
 import './Sidebar.css'
 
@@ -29,7 +29,9 @@ function Sidebar () {
           <a href="">
             <User />
             Profile</a>
-          <a href="">More</a>
+          <a href="">
+            <DotsThreeOutline />  
+            More</a>
         </nav>
         <button className="new-tweet" type="button">Tweet</button>
       </aside>
