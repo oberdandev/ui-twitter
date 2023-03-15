@@ -9,6 +9,8 @@ let newTweet = ''
 
 export function Timeline() {
 
+
+  const [newTweet, setNewTweet] = useState('')
   const [tweets, setTweets] = useState([
     'Meu primeiro tweet',
     'Meu Segundo tweet',
@@ -19,6 +21,7 @@ export function Timeline() {
     event.preventDefault()
     
       setTweets([newTweet, ...tweets])
+      setNewTweet('')
    }
 
    function handleKey(e) {
@@ -38,9 +41,10 @@ export function Timeline() {
       <label htmlFor="tweet">
         <img src="https://github.com/oberdandev.png" alt="" />
         <textarea 
+        value = {newTweet}
         onKeyDown={handleKey}
         onChange={(event)=> 
-        newTweet=event.target.value} 
+        setNewTweet(event.target.value)} 
         id="tweet" autoFocus placeholder="What's happening?"></textarea>
       </label>
 
